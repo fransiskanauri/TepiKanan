@@ -2,11 +2,114 @@
 <html>
     <!--Head-->
     <head>
-        <title></title>
-        <style></style>
+        <!--Judul-->
+        <title>Tepi Kanan Coffee</title>
+        <!--CSS-->
+        <style>
+            /* Head Image */
+            .headimage {
+                position: absolute;
+                width: 1440px;
+                height: 834px;
+                left: 0px;
+                top: -4px;
+
+                filter: blur(2px);
+            }
+            /* Navbar */
+            .Navbar {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding: 0px 10px;
+                gap: 10px;
+
+                position: absolute;
+                width: 1440px;
+                height: 69px;
+                left: 0px;
+                top: 830px;
+
+                background: #FFFFFF;
+            }
+
+            /* Section 2 = Gallery */
+            ul.images {
+            margin: 0;
+            padding: 0;
+            white-space: nowrap;
+            width: 600px;
+            overflow-x: auto;
+            background-color: #ddd;
+            }
+            ul.images li {
+            display: inline;
+            width: 150px;
+            height: 150px;
+            }
+        </style>
     </head>
     <!--Body-->
-    <body></body>
+    <body>
+        <!--Head Image-->
+        <div class="headimage bg-secondary">
+            <!--Image Head-->
+            <div class="imghead"></div>
+            <!--Caption-->
+            <div class="caphead"></div>
+        </div>
+        <!--Navbar-->
+        <div class="Navbar">
+             <!--Navbar About-->
+             <div class="navabout"></div>
+             <!--Navbar Menu-->
+             <div class="navmenu"></div>
+             <!--Navbar Contact Us-->
+             <div class="navcontact"></div>
+        </div>
+        <!--Section 1 = About -->
+        <div class="Section1">
+            <!--Section 1 = image -->
+            <div class="aboutimg"></div>
+            <!--Section 1 = Quote -->
+            <div class="aboutquote"></div>
+        </div>
+        <!--Section 2 = Gallery -->
+        <div class="Section2">
+            <ul class="images">
+                <li><a href="#"><img src="Asset/Sing.jpeg" width="150" height="150"/></a></li>
+                <li><a href="#"><img src="Asset/Play.jpeg" width="150" height="150"/></a></li>
+                <li><a href="#"><img src="Asset/Sing.jpg" width="150" height="150"/></a></li>
+                <li><a href="#"><img src="Asset/Sing.jpeg" width="150" height="150"/></a></li>
+                <li><a href="#"><img src="Asset/Play.jpeg" width="150" height="150"/></a></li>
+                <li><a href="#"><img src="Asset/Sing.jpg" width="150" height="150"/></a></li>
+              </ul>
+            <!--Section 2 = Image 1 -->
+            <div class="galleryimg1"></div>
+            <!--Section 2 = Image 2 -->
+            <div class="galleryimg2"></div>
+            <!--Section 2 = Image 3 -->
+            <div class="galleryimg3"></div>
+        </div>
+        <!--Section 3 = Menu-->
+        <div class="Section3">
+            <!--Section 3 = Judul Menu-->
+            <div class="MenuTitle"> Menu </div>
+            <!--Section 3 = Coffee-->
+            <div class="MenuCoffee">
+                <!--Coffee = Image-->
+                <!--Coffee = Menu -->
+            </div>
+            <!--Section 3 = Beverage-->
+            <div class="MenuBaverage">
+                <!--Beverage = Menu-->
+                <!--Beverage = Image -->
+            </div>
+        </div>
+        <!--Section 4 = Footer-->
+        <div class="Section4"></div>
+    </body>
     <!--Footer-->
     <footer></footer>
     <!--Java Script-->
