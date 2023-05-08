@@ -74,7 +74,6 @@
 
             /* font-weight: 700; */
             font-size: 2rem;
-
             /* line-height: 85px; */
             /* identical to box height */
 
@@ -99,6 +98,7 @@
             position: sticky;
             display: flex;
             flex-direction: row;
+
             width: 100%;
             justify-content: center;
             /* flex-wrap: nowrap; */
@@ -122,7 +122,7 @@
         .flex-container>div a {
             color: #000000;
             text-decoration: none;
-
+            font-size: 28px;
         }
 
         /* Section 1 = About */
@@ -130,7 +130,8 @@
             background-image: linear-gradient(white, rgb(85, 83, 83), #292929);
             display: flex;
             flex-direction: row;
-            justify-content: center;
+            flex-wrap: wrap;
+
             margin: auto;
             padding-top: 50px;
             padding-bottom: 50px;
@@ -139,21 +140,22 @@
         }
 
         .aboutimg {
-
             text-align: center;
-            width: 100%;
             padding: 10px;
             margin: auto;
+            flex: 50%;
         }
 
         .aboutimg>img {
-            width: 100px;
+            width: 200px;
         }
 
         .aboutquote {
             width: 100%;
             padding: 10px;
             margin: auto;
+            font-size: 24px;
+            flex: 50%;
         }
 
         .aboutquote>h3 {
@@ -176,20 +178,29 @@
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
 
+        @media (max-width: 800px) {
+
+            .flex-item-right,
+            .flex-item-left {
+                flex: 100%;
+            }
+        }
+
         /* Section 2 = Gallery */
         ul.images {
             margin: 0;
             padding: 0;
             white-space: nowrap;
             width: 100%;
+            height:fit-content;
             overflow-x: auto;
             background-color: #ddd;
         }
 
         ul.images li {
             display: inline;
-            width: 150px;
-            height: 150px;
+            width: 500px;
+            height: 500px;
         }
 
         /* Section 3 = Menu */
@@ -198,8 +209,20 @@
             padding: 20px;
         }
 
+        .MenuTitle {
+            background-color: #D49967;
+            text-align: center;
+            font-family: 'Inter';
+            font-style: normal;
+            font-size: 40px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
         .MenuCoffee {
             display: flex;
+            margin-top: 10px;
             flex-direction: row;
             flex-wrap: wrap;
             background-color: #301F18;
@@ -229,7 +252,6 @@
         }
 
         .imgsubmenu {
-            background-color: aquamarine;
             width: 100%;
         }
 
@@ -237,6 +259,7 @@
             padding-left: 10px;
             font-family: 'Inter';
             font-style: bold;
+
             color: #FFFFFF;
             text-transform: uppercase;
         }
@@ -264,11 +287,13 @@
             margin-left: 10px;
             width: 100%;
             margin: auto;
+            font-size: 16px;
         }
 
         .minibox>span {
             font-family: 'Sofia Sans';
             font-style: normal;
+            font-size: 16px;
             text-transform: uppercase;
             color: #000000;
 
@@ -287,7 +312,8 @@
 
         /* Menu Beverage*/
         .MenuBeverage {
-            background-color: darkcyan;
+            background-color: #D49967;
+            margin-top: 10px;
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
@@ -295,16 +321,14 @@
 
         .imgbeverage {
             background-color: aliceblue;
-            width: 300px;
         }
 
-        .SubMenuBeverage{
+        .SubMenuBeverage {
             flex: 50%;
             margin: auto;
             padding-top: 10px;
             padding-bottom: 10px;
         }
-
     </style>
 </head>
 <!--Body-->
@@ -388,6 +412,7 @@
             </div>
             <!--Coffee = Menu -->
             <div class="SubMenuCoffee">
+                <div class="submenu" align="center" style="font-size: 26px;"><span>Coffee</span></div>
                 <!--Coffee = Yang Spesial-->
                 <div class="submenu">
                     <span>Yang Spesial</span>
@@ -547,10 +572,13 @@
             </div>
         </div>
         <!--Section 3 = Beverage-->
+
         <div class="MenuBeverage">
             <!--Beverage = Menu-->
             <div class="SubMenuBeverage">
-                <div><span>Beverage</span></div>
+                <div class="submenu" align="center" style="font-size: 26px;">
+                    <span>Beverage</span>
+                </div>
                 <!--Beverage = Yang Asyik-->
                 <div class="submenu">
                     <span>Yang Asyik</span>
@@ -637,7 +665,9 @@
 
             <!--Beverage = Image -->
             <div class="SubMenuBaverage">
-                <img class="imgbeverage" src="Asset/FrenchFries.jpeg">
+                <div class="submenu">
+                    <img class="imgsubmenu" src="Asset/FrenchFries.jpeg">
+                </div>
             </div>
         </div>
     </div>
