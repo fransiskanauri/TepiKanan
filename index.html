@@ -1,311 +1,679 @@
+<!DOCTYPE html>
 <html>
-    <head>
-        <title>Tepi Kanan Coffee</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
 
-        <style>
-            .navimg {
-                /* position: absolute; */
-                width: 100%;
-                height: auto;
-                left: 0px;
-                /*top: -4px;*/
-                 filter: blur(2px);
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tepi Kanan Coffee</title>
+    <style>
+        .body {
+            background-color: #292929;
+        }
+
+        /* Parallax Group */
+        .parallax {
+            /* Create the parallax scrolling effect */
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .parallaxhead {
+            /* The image used */
+            background-image: url("Asset/CoffeeLatte.jpeg");
+            min-height: 800px;
+        }
+
+        .parallaxcoffee {
+            /* The image used */
+            background-image: url("Asset/CoffeeJar.jpeg");
+            min-height: 1000px;
+        }
+
+        .parallaxbeverage {
+            /* The image used */
+            background-image: url("Asset/FrenchFries.jpeg");
+            min-height: 1000px;
+        }
+
+        /* Head */
+        .centered {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+
+            transform: translate(-50%, -50%);
+        }
+
+        .tablecenter {
+            /* background-color: white; */
+            font-family: 'Inter';
+            font-style: normal;
+            /* identical to box height */
+
+            text-transform: uppercase;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            color: #FFFFFF;
+            max-height: 500px;
+            max-height: 500px;
+        }
+
+        .caphead {
+            font-family: 'Inter';
+            font-style: normal;
+            font-size: 2rem;
+            /* identical to box height */
+
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+
+        /* Navbar */
+
+        .Navbar {
+            width: 100%;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0px;
+        }
+
+        .flex-container {
+            position: -webkit-sticky;
+            position: sticky;
+            display: flex;
+            flex-direction: row;
+
+            width: 100%;
+            justify-content: center;
+            /* flex-wrap: nowrap; */
+            background-color: #FFFFFF;
+
+        }
+
+        .flex-container>div {
+            background-color: #FFFFFF;
+            color: #000000;
+            width: 100%;
+            margin: 5px;
+            text-align: center;
+            /* line-height: 50px; */
+            font-size: 16px;
+            font-family: 'Inter';
+            font-style: normal;
+            align-items: center;
+        }
+
+        .flex-container>div a {
+            color: #000000;
+            text-decoration: none;
+            font-size: 28px;
+        }
+
+        /* Section 1 = About */
+        .Section1 {
+            background-image: linear-gradient(white, rgb(85, 83, 83), #292929);
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 300px;
+            padding-bottom: 300px;
+            margin: auto;
+        }
+
+        @media (max-width: 800px) {
+
+            .flex-item-right,
+            .flex-item-left {
+                flex: 100%;
             }
+        }
 
-            .imglogo{
-                width: 200px;
-                height: 200px;
-            }
+        /* Section 1 = image */
+        .aboutimg {
+            flex: 50%;
+            margin: auto;
+            padding: auto;
+            text-align: center;
+        }
 
-            /* Section 1 */
-            .linequote {
-                /* position: absolute; */
-                width: 414px;
-                height: 261px;
-                left: 870px;
-                top: 1278px;
-                font-family: 'Sofia Sans';
-                font-style: normal;
-                font-weight: 200;
-                font-size: 24px;
-                line-height: 29px;
-                text-transform: uppercase;
-                color: #FFFFFF;
-                /* border: 1px solid #D9D9D9; */
-                }
-            .linehastag {
-                /* position: absolute; */
-                width: 412px;
-                height: 48px;
-                left: 861px;
-                top: 1186px;
+        .logo {
+            max-width: 50%;
+        }
 
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 40px;
-                line-height: 48px;
-                text-transform: uppercase;
+        /* Section 1 = Quote */
+        .aboutquote {
+            flex: 50%;
+            width: 100%;
+            height: 100%;
+            margin: auto;
+            padding: auto;
+        }
 
-                color: #FFFFFF;
+        .aboutquote>h3 {
+            text-align: left;
+            font-family: 'Inter';
+            font-style: normal;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            font-size: xx-large;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
 
-                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-                }
+        .aboutquote>p {
+            text-align: left;
+            margin: auto;
+            padding: 10px;
+            font-family: 'Sofia Sans';
+            font-style: normal;
+            font-size: xx-large;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
 
-            .body {
-                
-                }
-            
-            /* Section 2 Image slider */
-            .gallery-container {
-                                display: flex;
-                                overflow: hidden;
-                                }
+        /* Section 2 = Gallery */
+        ul.images {
+            margin: 0;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding: 0;
+            white-space: nowrap;
+            height: fit-content;
+            overflow-x: auto;
+            background-color: #ddd;
+        }
 
-            .gallery-container img {
-                                width: 100%;
-                                height: auto;
-                                display: none;
-                                }
+        ul.images li {
+            display: inline;
+        }
 
-            .gallery-container img:first-of-type {
-                                display: block;
-                                }
-            /* Section 3 Menu Coffee */
-            .menucoffee {
-                /* position: absolute; */
-                width: 100%;
-                height: 1016px;
-                left: 0px;
-                /*top: 2246px;*/
-            }
-            .imgcoffee {
-                /* position: absolute; */
-                width: auto;
-                height: 1016px;
-                left: 0px;
-                top: 2246px;
-            }
-            .imgcoffeejar{
-                width: 100%;
-                height: 100%;
-                left: 0px;
-                top: 2246px;
-            }
-            .listmenucoffee {
-                /* position: absolute; */
-                width: 100%;
-                height: 1016px;
-                left: 791.13px;
-                /* top: 2246px; */
+        .images>li>a>img {
+            max-width: 600px;
+        }
 
-                background: #301F18;
-            }
-            .judulmenucoffee {
-                /* position: absolute; */
-                width: 118px;
-                height: 34.87px;
-                left: 1057px;
-                top: 2262.47px;
+        /* Section 3 = Menu */
+        .MenuTitle {
+            text-align: center;
+            font-family: 'Inter';
+            font-style: normal;
+            font-size: 40px;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
 
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 28px;
-                line-height: 34px;
-                text-transform: uppercase;
+        .SubMenuBeverage {
+            background-color: #D49967;
+            /* width: fit-content; */
+            min-width: 50%;
+            max-width: 100%;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            margin-top: 100px;
+            float: right;
+        }
 
-                color: #FFFFFF;
-            }
-            .coffeespecial {
-                /* position: absolute; */
-                width: 150px;
-                height: 18px;
-                left: 870px;
-                top: 2327px;
+        .SubMenuCoffee {
+            background-color: #301F18;
+            min-width: 50%;
+            max-width: 100%;
+            margin-top: 50px;
+            padding-top: 50px;
+            padding-bottom: 50px;
+            float: left;
+        }
 
-                font-family: 'Inter';
-                font-style: normal;
-                font-weight: 700;
-                font-size: 20px;
-                line-height: 24px;
-                text-transform: uppercase;
+        .submenu {
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+            padding-bottom: 5px;
+        }
 
-                color: #FFFFFF;
-            }
-            .listyangspecial {
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 0px;
-                gap: 2px;
+        .submenu>span {
+            padding-left: 10px;
+            font-family: 'Inter';
+            font-style: bold;
+            color: #FFFFFF;
+            text-transform: uppercase;
+        }
 
-                /* position: absolute; */
-                width: 491px;
-                height: 196px;
-                left: 870px;
-                top: 2359px;
+        .bigbox {
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            padding-right: 10px;
+            /* height: max-content;*/
+            display: flex;
+            flex-direction: column;
+        }
 
-                border: 1px solid #3E3B3B;
-            }
-            .boxlist{
-                box-sizing: border-box;
+        .box {
+            background-color: aliceblue;
+            margin-top: 5px;
+            display: flex;
+            flex-direction: row;
 
-                /* Auto layout */
+        }
 
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                padding: 2px 16px;
-                gap: 10px;
+        .minibox {
+            padding-left: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin-right: 10px;
+            margin-left: 10px;
+            width: 100%;
+            margin: auto;
+            font-size: 16px;
+        }
 
-                width: 491px;
-                height: 64px;
+        .minibox>span {
+            font-family: 'Sofia Sans';
+            font-style: normal;
+            font-size: 16px;
+            text-transform: uppercase;
+            color: #000000;
+        }
 
-                background: #FFFFFF;
-                border: 1px solid #FFFFFF;
+        .right {
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-family: 'Sofia Sans';
+            font-style: normal;
+            text-transform: uppercase;
+            color: #000000;
+        }
 
-                /* Inside auto layout */
+        .left {
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            font-family: 'Sofia Sans';
+            font-style: normal;
+            text-transform: uppercase;
+            color: #000000;
+        }
 
-                flex: none;
-                order: 0;
-                flex-grow: 0;
-            }
+        /* Contact Us */
+        .ContactUs {
+            margin-top: 30px;
+            max-width: 90%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            margin: auto;
+        }
 
-            .menubeverage {
-                /* position: absolute; */
-                width: 100%;
-                height: 713px;
-                left: 0px;
-                top: 3286px;
-            }
+        .titlecontact {
+            font-family: 'Sofia Sans';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 36px;
+            line-height: 43px;
+            text-transform: uppercase;
 
-        </style>
-    </head>
+            color: #FFFFFF;
+        }
 
-    <body style="background-color: 292929;">
-        <!--Navbar-->
-        <div>
-            <div class="navbar container-fluid">
-                <img src="Asset/CoffeeLatte.jpeg" class="navimg container-fluid .mx-auto .d-block" alt="Coffee Latte">
+        .footer {
+            text-align: center;
+            font-size: large;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <!--Head-->
+    <div class="parallax parallaxhead"></div>
+
+    <!--Caption-->
+    <div class="centered">
+        <table class="tablecenter">
+            <tr>
+                <td class="caphead">Tepi Kanan Coffee</td>
+            </tr>
+            <tr>
+                <td align="right">Coffee and workspace</td>
+            </tr>
+        </table>
+    </div>
+
+    <!--Navbar-->
+    <div class="Navbar">
+        <div class="flex-container">
+            <div> <!--Navbar About-->
+                <a class="navabout" href="#About">About</a>
             </div>
-            <div class="container-fluid mt-3 sticky-top">
-                
-                <!-- <img src="Asset/CoffeeLatte.jpeg" class="navimg" alt="Coffee Latte"> -->
-                <div class="row">
-                  <div class="col p-3 bg-secondary text-white text-center">About</div>
-                  <div class="col p-3 bg-secondary text-white text-center">Menu</div>
-                  <div class="col p-3 bg-secondary text-white text-center">Contact Us</div>
-                </div>
-              </div>
+            <div> <!--Navbar Menu-->
+                <a class="navmenu" href="#Menu">Menu</a>
             </div>
+            <div> <!--Navbar Contact Us-->
+                <a class="navcontact" href="#ContactUs">Contact Us</a>
+            </div>
+        </div>
+    </div>
 
-        <main>
-            <!--Section 1 = About = Quotes and Logo-->
-            <div class="section1">
-                <div class="container-fluid mt-3">
-                    <!-- <img src="Asset/CoffeeLatte.jpeg" class="navimg" alt="Coffee Latte"> -->
-                    <div class="row">
-                      <div class="col p-3 text-white text-center">
-                        <img src="Asset/Icon.png" class="imglogo" alt="Logo">
-                      </div>
-                      <div class="col p-3 text-white ">
-                        <h3 class="linehastag text-center">#brewedwithlove</h3>
-                        <h3 class="linequote">“Do not Start a bussiness just to make Money.
-                            Start a Bussiness to Spread <br>
-                            Love, <br>
-                            Affection, <br>
-                            Gratitude, <br>
-                            and to Help each Other.” <br>
-                            <br>
-                            - LK -</h3>
-                      </div>
-                    </div>
-                  </div>
-            </div>
-            <!--Section 2 = About = Sliding Gallery -->
-            <div class="section2">
-                <div class="gallery-container">
-                        <img src="Asset/Sing.jpeg" class="imgsing1" alt="Image 1">
-                        <img src="Asset/Play.jpeg" class="imgplay1" alt="Image 2">
-                        <img src="Asset/Sing.jpg" class="imgsing2" alt="Image 3">
-                </div>
-            </div>
-            <!--Section 3 = Menu = Menu List -->
-            <div class="section3">
-                <!-- Judul Menu -->
-                <div class="captionmenu container-fluid mt-3 bg-dark text-white text-center">
-                    <h3>Our Menu</h3>
-                </div>
-                <!-- Menu All -->
-                <div class="menucoffee bg-secondary">
-                    <div class="row">
-                        <!-- Image Menu Coffee-->
-                        <div class="col p-2 imgcoffee">
-                            <img src="Asset/CoffeeJar.jpeg" class="imgcoffeejar" alt="imgcoffeejar">
+    <!--Section 1 = About -->
+    <div class="Section1" id="About">
+        <!--Section 1 = image -->
+        <div class="aboutimg">
+            <img class="logo" src="Asset/Icon.png">
+        </div>
+        <!--Section 1 = Quote -->
+        <div class="aboutquote">
+            <h3>#brewedwithlove</h3>
+            <p>“Do not Start a bussiness
+                just to make Money. <br>
+                Start a Bussiness to Spread <br>
+                Love, <br>
+                Affection, <br>
+                Gratitude, <br>
+                and to Help each Other.” <br>
+                <br>
+                - LK -
+            </p>
+        </div>
+    </div>
+
+    <!--Section 2 = Gallery -->
+    <div class="MenuTitle"> Gallery </div>
+    <div class="Section2">
+        <ul class="images">
+            <li><a href="#"><img src="Asset/Sing.jpeg" /></a></li>
+            <li><a href="#"><img src="Asset/Play.jpeg" /></a></li>
+            <li><a href="#"><img src="Asset/Sing.jpg" /></a></li>
+            <li><a href="#"><img src="Asset/Sing.jpeg" /></a></li>
+            <li><a href="#"><img src="Asset/Play.jpeg" /></a></li>
+        </ul>
+    </div>
+
+    <!--Section 3 = Menu-->
+    <div class="MenuTitle" id="Menu"> Our Menu </div>
+    <!--Section 3 = Coffee-->
+    <div class="parallax parallaxcoffee">
+        <div class="SubMenuCoffee">
+            <!--Coffee = Yang Spesial-->
+            <div class="submenu">
+                <span>Yang Spesial</span>
+                <div class="bigbox">
+                    <!--Coffee = Kopi Kanan-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Kopi Kanan</span> <br>
+                            Perfectly balanced coffee, milk and sweetness
                         </div>
-                        <!--Menu Coffee-->
-                        <div class="col p-2 listmenucoffee">
-                            <!--Judul Menu Coffee-->
-                            <div class="judulmenucoffee">
-                                <span class="judulmenucoffee">Coffee</span>
-                            </div>
-                            <!--Judul Menu Coffee Special-->
-                            <div class="coffeespecial">
-                                <span>Yang Special</span>
-                                <div class="listyangspecial boxlist">
-                                    hello
-                                </div>
-                                <div class="boxlist">
-                                    hello2
-                                </div>
-                            </div>
-                            <!--Judul Menu Coffee Special-->
-                            <div class="coffeeenak">
-                                <span>Yang Enak</span>
-                            </div>
-                            <!--Judul Menu Coffee Special-->
-                            <div class="coffeeekstra">
-                                <span>Yang Ekstra</span>
-                            </div>
+                        <div class="right">
+                            27
                         </div>
                     </div>
-                    
+                    <!--Coffee = Pink Panther-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Pink Panther</span> <br>
+                            Who loves soft, sweet and sourness of berries
+                        </div>
+                        <div class="right">
+                            27
+                        </div>
+                    </div>
+                    <!--Coffee = Manual Brew-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Manual Brew</span> <br>
+                            The Purist. Tubruk / Filter / Vietnamese Style
+                        </div>
+                        <div class="right">
+                            25
+                        </div>
+                    </div>
                 </div>
-                <div class="menubeverage bg-white">
-                    hello
+            </div>
+            <!--Coffee = Yang Enak-->
+            <div class="submenu">
+                <span>Yang Enak</span>
+                <div class="bigbox">
+                    <!--Coffee = Amerikano-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Amerikano</span> <br>
+                            Most favorite Coffee
+                        </div>
+                        <div class="right">
+                            25
+                        </div>
+                    </div>
+                    <!--Coffee = Kapucino-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Kapucino</span><br>
+                            Classic espressso and milk
+                        </div>
+                        <div class="right">
+                            27
+                        </div>
+                    </div>
+                    <!--Coffee = Madcha-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Madcha</span><br>
+                            Precious matcha latte
+                        </div>
+                        <div class="right">
+                            27
+                        </div>
+                    </div>
+                    <!--Coffee = Milcoko-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Milcoko</span><br>
+                            Lovely chocolate milk
+                        </div>
+                        <div class="right">
+                            27
+                        </div>
+                    </div>
+                    <!--Coffee = Tiramisyu-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Tiramisyu</span><br>
+                            Her favorite :(
+                        </div>
+                        <div class="right">
+                            27
+                        </div>
+                    </div>
+                    <!--Coffee = Leciti-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Leciti</span><br>
+                            Sweet lychee tea
+                        </div>
+                        <div class="right">
+                            25
+                        </div>
+                    </div>
+                    <!--Coffee = Lemonti-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Lemonti</span><br>
+                            Fresh Lemontea
+                        </div>
+                        <div class="right">
+                            25
+                        </div>
+                    </div>
                 </div>
             </div>
-                
-            
-            <div class="section4">
-                Hello 4
+
+            <!--Coffee = Yang Ekstra-->
+            <div class="submenu">
+                <span>Yang Ekstra</span>
+                <div class="bigbox">
+                    <!--Coffee = Espresso Shot-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Espresso Shot</span>
+                        </div>
+                        <div class="right">
+                            10
+                        </div>
+                    </div>
+                    <!--Coffee = Extra Syrup-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Extra Syrup</span>
+                        </div>
+                        <div class="right">
+                            10
+                        </div>
+                    </div>
+                    <!--Coffee = Oat Milk-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Oat Milk</span>
+                        </div>
+                        <div class="right">
+                            10
+                        </div>
+                    </div>
+                    <!--Coffee = mineral water-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Mineral water</span>
+                        </div>
+                        <div class="right">
+                            10
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-        </main>
-
-        <footer>
-            <div class="container-fluid mt-3 bg-dark text-white text-center">
-                <p>© 2023 Tepi Kanan Coffee. All rights reserved.</p>
+        </div>
+    </div>
+    <!--Section 3 = Beverage-->
+    <div class="MenuTitle"> Beverage </div>
+    <div class="parallax parallaxbeverage">
+        <div class="SubMenuBeverage">
+            <!--Beverage = Yang Asyik-->
+            <div class="submenu">
+                <span>Yang Asyik</span>
+                <div class="bigbox">
+                    <!--Beverage = Kopi Kanan-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>cirenk Roedjak</span> <br>
+                            Cirenk with sambal rujak
+                        </div>
+                        <div class="right">
+                            25
+                        </div>
+                    </div>
+                    <!--Beverage = Ciken Wings-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Ciken Wings</span> <br>
+                            Wings platter
+                        </div>
+                        <div class="right">
+                            25
+                        </div>
+                    </div>
+                    <!--Beverage = Pren Prais-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Pren Prais</span> <br>
+                            Favorite French Fries
+                        </div>
+                        <div class="right">
+                            25
+                        </div>
+                    </div>
+                </div>
             </div>
-        </footer>
-    </body>
+            <!--Beverage = Yang Kenyang-->
+            <div class="submenu">
+                <span>Yang Kenyang</span>
+                <div class="bigbox">
+                    <!--Beverage = Beef Teriyaki-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Beef Teriyaki</span> <br>
+                            Beef Teriyaki with Rice
+                        </div>
+                        <div class="right">
+                            35
+                        </div>
+                    </div>
+                    <!--Beverage = Ciken Teriyaki-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Ciken Teriyaki</span> <br>
+                            Chicken Teriyaki with Rice
+                        </div>
+                        <div class="right">
+                            35
+                        </div>
+                    </div>
+                    <!--Beverage = Yam Geprek-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Yam Geprek</span> <br>
+                            Smashed Chicken with Rice
+                        </div>
+                        <div class="right">
+                            35
+                        </div>
+                    </div>
+                    <!--Beverage = Mee Telor-->
+                    <div class="box">
+                        <div class="minibox">
+                            <span>Mee Telor</span> <br>
+                            Most loved noodle with egg
+                        </div>
+                        <div class="right">
+                            25
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
-    <script>
-    const galleryImages = document.querySelectorAll('.gallery-container img');
-    let currentImageIndex = 0;
+    <!--Section 4 = Contact Us-->
+    <div class="ContactUs" id="ContactUs">
+        <div class="titlecontact">Contact Us</div>
+        <div class="bigbox">
+            <div class="box"> <a href="https://www.instagram.com/tepikanancoffeebar/">
+                <div class="left">
+                    <img src="Asset/🦆 icon _instagram_.png"> </a>
+                </div>
+                <div class="minibox">
+                    <span>tepikanancoffeebar</span>
+                </div>
+            
+            </div>
+            <div class="box"> <a href="https://goo.gl/maps/aNG61qhyLhCRzvHN7">
+                <div class="left">
+                    <img src="Asset/🦆 icon _location_.png">
+                </a>
+                </div>
+                <div class="minibox">
+                    <span>tepi kanan coffee</span> <br>
+                    Gg. Bina Satwa No.9A, Tanah Sareal, Kec. Tanah Sereal, Kota Bogor, Jawa Barat 16161
+                </div>
+            </div>
+        </div>
 
-    function showNextImage() {
-    galleryImages[currentImageIndex].style.display = 'none';
-    currentImageIndex = (currentImageIndex + 1) % galleryImages.length;
-    galleryImages[currentImageIndex].style.display = 'block';
-    }
 
-    setInterval(showNextImage, 5000);
-    </script>
+        <footer><div class="footer">© 2023 Tepi Kanan Coffee. All rights reserved.</div></footer>
+
+    </div>
+</body>
 
 </html>
