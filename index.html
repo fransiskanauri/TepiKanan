@@ -21,25 +21,31 @@
         .parallaxhead {
             /* The image used */
             background-image: url("Asset/CoffeeLatte.jpeg");
-            min-height: 800px;
+            min-height: 1250px;
         }
 
         .parallaxcoffee {
             /* The image used */
             background-image: url("Asset/CoffeeJar.jpeg");
-            min-height: 1000px;
+            min-height: 1250px;
+            padding-left: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         .parallaxbeverage {
             /* The image used */
             background-image: url("Asset/FrenchFries.jpeg");
-            min-height: 1000px;
+            min-height: 1250px;
+            padding-right: 50px;
+            margin-left: 10px;
+            margin-right: 10px;
         }
 
         /* Head */
         .centered {
             position: absolute;
-            top: 30%;
+            top: 40%;
             left: 50%;
 
             transform: translate(-50%, -50%);
@@ -47,7 +53,7 @@
 
         .tablecenter {
             /* background-color: white; */
-            font-family: 'Inter';
+            font-family: 'Helvetica';
             font-style: normal;
             /* identical to box height */
 
@@ -59,9 +65,9 @@
         }
 
         .caphead {
-            font-family: 'Inter';
+            font-family: 'Helvetica';
             font-style: normal;
-            font-size: 2rem;
+            font-size: 3rem;
             /* identical to box height */
 
             text-transform: uppercase;
@@ -92,14 +98,17 @@
         }
 
         .flex-container>div {
-            background-color: #FFFFFF;
+            background-color: white;
             color: #000000;
             width: 100%;
-            margin: 5px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            margin: auto;
             text-align: center;
             /* line-height: 50px; */
             font-size: 16px;
-            font-family: 'Inter';
+            font-family: 'Helvetica';
+
             font-style: normal;
             align-items: center;
         }
@@ -110,6 +119,10 @@
             font-size: 28px;
         }
 
+        .flex-container :hover {
+            background-color: whitesmoke;
+        }
+
         /* Section 1 = About */
         .Section1 {
             background-image: linear-gradient(white, rgb(85, 83, 83), #292929);
@@ -117,8 +130,8 @@
             display: flex;
             flex-direction: row;
             flex-wrap: wrap;
-            padding-top: 300px;
-            padding-bottom: 300px;
+            padding-top: 350px;
+            padding-bottom: 350px;
             margin: auto;
         }
 
@@ -130,12 +143,17 @@
             }
         }
 
+        
         /* Section 1 = image */
         .aboutimg {
             flex: 50%;
             margin: auto;
             padding: auto;
             text-align: center;
+        }
+
+        .aboutimg :hover {
+            transform: rotateY(180deg);
         }
 
         .logo {
@@ -153,7 +171,7 @@
 
         .aboutquote>h3 {
             text-align: left;
-            font-family: 'Inter';
+            font-family: 'Helvetica';
             font-style: normal;
             text-transform: uppercase;
             color: #FFFFFF;
@@ -165,7 +183,7 @@
             text-align: left;
             margin: auto;
             padding: 10px;
-            font-family: 'Sofia Sans';
+            font-family: 'Helvetica';
             font-style: normal;
             font-size: xx-large;
             text-transform: uppercase;
@@ -182,7 +200,7 @@
             white-space: nowrap;
             height: fit-content;
             overflow-x: auto;
-            background-color: #ddd;
+            background-color: #292929;
         }
 
         ul.images li {
@@ -190,19 +208,20 @@
         }
 
         .images>li>a>img {
-            max-width: 600px;
+            max-width: 800px;
+            background-size: contain;
         }
 
         /* Section 3 = Menu */
         .MenuTitle {
             text-align: center;
-            font-family: 'Inter';
+            font-family: 'Helvetica';
             font-style: normal;
             font-size: 40px;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: 50px;
+            padding-bottom: 50px;
             text-transform: uppercase;
-            color: #FFFFFF;
+            color: whitesmoke;
             text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
         }
 
@@ -235,8 +254,8 @@
         }
 
         .submenu>span {
-            padding-left: 10px;
-            font-family: 'Inter';
+            padding-left: 20px;
+            font-family: 'Helvetica';
             font-style: bold;
             color: #FFFFFF;
             text-transform: uppercase;
@@ -245,15 +264,15 @@
         .bigbox {
             padding-top: 5px;
             padding-bottom: 5px;
-            padding-left: 10px;
-            padding-right: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
             /* height: max-content;*/
             display: flex;
             flex-direction: column;
         }
 
         .box {
-            background-color: aliceblue;
+            background-color: whitesmoke;
             margin-top: 5px;
             display: flex;
             flex-direction: row;
@@ -266,13 +285,14 @@
             padding-bottom: 5px;
             margin-right: 10px;
             margin-left: 10px;
+            font-family: 'Helvetica';
             width: 100%;
             margin: auto;
             font-size: 16px;
         }
 
         .minibox>span {
-            font-family: 'Sofia Sans';
+            font-family: 'Helvetica';
             font-style: normal;
             font-size: 16px;
             text-transform: uppercase;
@@ -284,7 +304,7 @@
             padding-right: 5px;
             padding-top: 5px;
             padding-bottom: 5px;
-            font-family: 'Sofia Sans';
+            font-family: 'Helvetica';
             font-style: normal;
             text-transform: uppercase;
             color: #000000;
@@ -295,7 +315,7 @@
             padding-right: 5px;
             padding-top: 5px;
             padding-bottom: 5px;
-            font-family: 'Sofia Sans';
+            font-family: 'Helvetica';
             font-style: normal;
             text-transform: uppercase;
             color: #000000;
@@ -303,28 +323,31 @@
 
         /* Contact Us */
         .ContactUs {
-            margin-top: 30px;
+            margin-top: 100px;
             max-width: 90%;
-            padding-top: 30px;
-            padding-bottom: 30px;
+            padding-top: 100px;
+            padding-bottom: 100px;
             margin: auto;
         }
 
         .titlecontact {
-            font-family: 'Sofia Sans';
+            font-family: 'Helvetica';
             font-style: normal;
             font-weight: 700;
             font-size: 36px;
             line-height: 43px;
             text-transform: uppercase;
 
-            color: #FFFFFF;
+            color: whitesmoke;
         }
 
         .footer {
             text-align: center;
+            font-family: 'Helvetica';
+            color: whitesmoke;
             font-size: large;
             margin-top: 20px;
+            padding-top: 100px;
         }
     </style>
 </head>
@@ -650,28 +673,31 @@
         <div class="titlecontact">Contact Us</div>
         <div class="bigbox">
             <div class="box"> <a href="https://www.instagram.com/tepikanancoffeebar/">
-                <div class="left">
-                    <img src="Asset/🦆 icon _instagram_.png"> </a>
-                </div>
-                <div class="minibox">
-                    <span>tepikanancoffeebar</span>
-                </div>
-            
+                    <div class="left">
+                        <img src="Asset/🦆 icon _instagram_.png">
+                </a>
             </div>
-            <div class="box"> <a href="https://goo.gl/maps/aNG61qhyLhCRzvHN7">
+            <div class="minibox">
+                <span>tepikanancoffeebar</span>
+            </div>
+
+        </div>
+        <div class="box"> <a href="https://goo.gl/maps/aNG61qhyLhCRzvHN7">
                 <div class="left">
                     <img src="Asset/🦆 icon _location_.png">
-                </a>
-                </div>
-                <div class="minibox">
-                    <span>tepi kanan coffee</span> <br>
-                    Gg. Bina Satwa No.9A, Tanah Sareal, Kec. Tanah Sereal, Kota Bogor, Jawa Barat 16161
-                </div>
-            </div>
+            </a>
         </div>
+        <div class="minibox">
+            <span>tepi kanan coffee</span> <br>
+            Gg. Bina Satwa No.9A, Tanah Sareal, Kec. Tanah Sereal, Kota Bogor, Jawa Barat 16161
+        </div>
+    </div>
+    </div>
 
 
-        <footer><div class="footer">© 2023 Tepi Kanan Coffee. All rights reserved.</div></footer>
+    <footer>
+        <div class="footer">© 2023 Tepi Kanan Coffee. All rights reserved.</div>
+    </footer>
 
     </div>
 </body>
