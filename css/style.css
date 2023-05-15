@@ -382,7 +382,7 @@ html, body{ height: 100%; }
 -------------------------------------------------------------------*/
 
 .banner{
-	background:url(/Asset/CoffeeJar.jpeg) no-repeat center top;
+	background:url(/Asset/background-specialcoffee.png) no-repeat center top;
 	background-attachment:fixed;
 	background-size:cover;
 	height:100vh;
@@ -655,7 +655,7 @@ html, body{ height: 100%; }
     SPECIAL-MENU AREA
 -------------------------------------------------------------------*/
 .special-menu{
-	background:url(../Asset/images/special_menu_bg.jpg) no-repeat center;
+	background:url(../Asset/background-specialcoffee.png) no-repeat center;
 	background-attachment:fixed;
 	background-size:cover;
 	position:relative;
